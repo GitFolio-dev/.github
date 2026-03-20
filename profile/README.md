@@ -7,10 +7,10 @@
 
 <br/>
 
-![Status](https://img.shields.io/badge/status-in%20planning-blue?style=flat-square)
+![Status](https://img.shields.io/badge/status-in%20development-orange?style=flat-square)
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?style=flat-square&logo=tailwindcss)
-![Claude API](https://img.shields.io/badge/Claude-API-D97706?style=flat-square)
+![Gemini API](https://img.shields.io/badge/Gemini-API-4285F4?style=flat-square&logo=google)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 </div>
@@ -36,7 +36,7 @@
 | 기능 | 설명 |
 |---|---|
 | 🔍 GitHub 자동 분석 | 프로필, 레포지토리, README, 기술 스택을 자동 수집 |
-| ✍️ AI 자기소개 생성 | Claude API가 개발자 성향에 맞는 소개 문구를 작성 |
+| ✍️ AI 자기소개 생성 | gemini API가 개발자 성향에 맞는 소개 문구를 작성 |
 | 🎨 포트폴리오 자동 구성 | Hero · 기술 스택 · 프로젝트 카드 · Contact 섹션 자동 배치 |
 | ✏️ 인라인 편집 | 생성된 내용을 바로 수정 가능 |
 | 🔗 공유 링크 발급 | 고유 URL로 즉시 공유 (`/p/username`) |
@@ -63,7 +63,7 @@
 
 **Backend**
 - Next.js API Routes
-- [Claude API](https://www.anthropic.com/) — 자기소개 · 프로젝트 설명 생성
+- [Gemini API](https://aistudio.google.com/) — 자기소개 · 프로젝트 설명 생성
 - [GitHub REST API v3](https://docs.github.com/en/rest) — 공개 프로필 · 레포 수집
 
 **Infrastructure**
@@ -87,7 +87,7 @@ npm install
 
 # 환경변수 설정
 cp .env.example .env.local
-# .env.local에 ANTHROPIC_API_KEY 입력
+# .env.local에 GEMINI_API_KEY 입력
 
 # 개발 서버 실행
 npm run dev
@@ -96,7 +96,7 @@ npm run dev
 ### 환경변수 / Environment Variables
 
 ```env
-ANTHROPIC_API_KEY=your_claude_api_key
+GEMINI_API_KEY=your_claude_api_key
 ```
 
 ---
@@ -118,7 +118,7 @@ gitfolio-app/
 │   └── ui/                      # 공용 UI 컴포넌트
 └── lib/
     ├── github.ts                # GitHub API 클라이언트
-    └── claude.ts                # Claude API 래퍼
+    └── gemini.ts                # Claude API 래퍼
 ```
 
 ---
@@ -126,7 +126,7 @@ gitfolio-app/
 ## 로드맵 / Roadmap
 
 - [ ] GitHub 프로필 · 레포지토리 수집 API
-- [ ] Claude API 연동 및 프롬프트 설계
+- [ ] Gemini API 연동 및 프롬프트 설계
 - [ ] 포트폴리오 렌더러 UI
 - [ ] 인라인 편집 기능
 - [ ] 공유 링크 발급 및 공개 페이지
@@ -174,5 +174,5 @@ chore: 빌드 · 설정 변경
 ---
 
 <div align="center">
-  <sub>Built with Claude API · GitHub REST API · Next.js</sub>
+  <sub>Built with Gemini API · GitHub REST API · Next.js</sub>
 </div>
